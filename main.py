@@ -17,7 +17,7 @@ bot = telegram.Bot(token=TOKEN)
 
 # Час для відправки опитування
 TARGET_HOUR = 15
-TARGET_MINUTE = 10
+TARGET_MINUTE = 15
 
 async def send_poll_async():
     try:
