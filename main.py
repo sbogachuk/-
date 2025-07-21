@@ -14,7 +14,7 @@ GROUP_ID = int(os.getenv("GROUP_ID", "-4923200694"))
 
 # Час для надсилання опитування
 TARGET_HOUR = 16
-TARGET_MINUTE = 15
+TARGET_MINUTE = 33
 
 async def send_poll_async(application: Application):
     """Функція надсилання опитування"""
