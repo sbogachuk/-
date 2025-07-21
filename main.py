@@ -16,8 +16,8 @@ GROUP_ID = int(os.getenv('GROUP_ID'))  # Отримуємо з змінних с
 bot = telegram.Bot(token=TOKEN)
 
 # Час для відправки опитування
-TARGET_HOUR = 14
-TARGET_MINUTE = 29
+TARGET_HOUR = 15
+TARGET_MINUTE = 08
 
 async def send_poll_async():
     try:
