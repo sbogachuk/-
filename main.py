@@ -17,7 +17,7 @@ bot = telegram.Bot(token=TOKEN)
 
 # Час для відправки опитування
 TARGET_HOUR = 16
-TARGET_MINUTE = 10
+TARGET_MINUTE = 13
 
 async def send_poll_async():
     try:
@@ -38,10 +38,10 @@ async def main():
     try:
         # Ініціалізація бота
         application = Application.builder().token(TOKEN).build()
-        await application.initialize()
-        await application.start()
-        await application.updater.start_polling()
         logger.info("Бот запущено успішно")
+
+        # Запускаємо polling
+        await application.run_polling(allowed_updates=telegram.Update.ALL_TYPES)
 
         while True:
             # Отримуємо поточний час у київському часовому поясі
